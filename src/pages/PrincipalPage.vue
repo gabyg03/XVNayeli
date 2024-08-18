@@ -17,7 +17,7 @@
           <p class="openSans">9 de Noviembre de 2024</p>
           <CuentaRegresiva />
           <p class="openSans" style="margin-top: 20px">Faltan:</p>
-          <img class="lineaAbajo" src="src/assets/linea2.png" />
+          <img class="lineaAbajo" src="public/linea2.png" />
         </div>
       </div>
     </q-page>
