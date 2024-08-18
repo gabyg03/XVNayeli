@@ -10,13 +10,13 @@
           <p class="junge">MIS 15 AÑOS</p>
           <img class="linead" src="src/assets/linea.png" />
         </div>
-        <div class="linea-container">
+        <div class="centrado">
           <MusicPlayer class="music-player" />
           <img class="linea" src="src/assets/linea2.png" />
           <p class="allura">Aparta la Fecha</p>
           <p class="openSans">9 de Noviembre de 2024</p>
-          <CuentaRegresiva class="cuentaR" />
-          <p class="openSans" style="top: 730px">Faltan:</p>
+          <CuentaRegresiva />
+          <p class="openSans" style="margin-top: 30px">Faltan:</p>
           <img class="lineaAbajo" src="src/assets/linea2.png" />
         </div>
       </div>
@@ -44,43 +44,28 @@ import MusicPlayer from "../components/MusicPlayer.vue";
 }
 
 .main-content {
-  position: relative; /* Importante para que el contenido se posicione correctamente sobre el fondo */
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura de la ventana */
-  color: #fff; /* Color del texto para mejor visibilidad sobre el fondo oscuro */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .fotoP {
-  height: 915px;
+  height: 100vh;
   width: auto;
   position: relative;
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
   z-index: 0; /* Asegura que el overlay esté sobre la foto, pero debajo del texto */
-}
-
-.sacramento {
-  font-family: "Sacramento", cursive;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(239, 184, 16); /* Color dorado */
-  font-size: 100px;
-  position: absolute; /* Posición absoluta para que el texto se sitúe sobre el cuadro */
-  bottom: 150px; /* Ajusta la posición según sea necesario */
-  z-index: 2; /* Asegura que el texto esté sobre el cuadro negro */
-  text-shadow: 1px 1px 2px #000, 0 0 25px #f4c542, 0 0 5px #f4c542; /* Brillo dorado y contorno */
 }
 
 .fade-enter-active,
@@ -100,7 +85,7 @@ import MusicPlayer from "../components/MusicPlayer.vue";
     width: 100%;
     min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura de la ventana */
     color: #fff; /* Color del texto para mejor visibilidad sobre el fondo oscuro */
-    display: flex;
+    display: flexbox;
     align-items: center;
     justify-content: center;
   }
@@ -160,51 +145,48 @@ import MusicPlayer from "../components/MusicPlayer.vue";
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
-    position: absolute;
-    top: 580px;
+    margin-top: 20px;
   }
-  .cuentaR {
-    position: absolute;
-    top: 790px;
-  }
+
   .lineaAbajo {
     width: 300px; /* Ajusta el tamaño según sea necesario */
     height: auto;
-    position: absolute;
     top: 770px; /* Ajusta la posición según sea necesario */
     z-index: 2;
   }
-}
-.linead {
-  width: 450px;
-  height: auto;
-  position: absolute;
-  bottom: 30px;
-}
-.linea-container {
-  position: relative;
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 100%; /* Asegura que el contenedor ocupe el 100% de la altura disponible */
-  width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
-  text-align: center; /* Opcional: centra el texto si es necesario */
-}
+  .linead {
+    width: 450px;
+    height: auto;
+    position: absolute;
+    bottom: 30px;
+  }
+  .contenedor-principal > div {
+    width: 100%; /* Abarca todo el ancho del contenedor */
+    max-width: 1200px; /* Opcional: límite de ancho para evitar que sea muy ancho en pantallas grandes */
+    margin-bottom: 16px; /* Espaciado entre los divs */
+  }
+  .centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Centra el texto en líneas múltiples */
+  }
 
-.linea {
-  width: 300px; /* Ajusta el tamaño según sea necesario */
-  height: auto;
-  position: absolute;
-  top: 400px; /* Ajusta la posición según sea necesario */
-  z-index: 2;
-}
-.openSans {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 30px;
-  position: absolute;
-  top: 670px;
+  .linea {
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-top: 200px; /* Ajusta la posición según sea necesario */
+    z-index: 2;
+  }
+  .openSans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+  }
 }
 </style>
