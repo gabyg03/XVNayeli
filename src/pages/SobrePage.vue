@@ -14,7 +14,7 @@
       <img class="flores2" src="src/assets/flores.png" alt="flores2" />
       <img class="flores3" src="src/assets/flores.png" alt="flores3" />
       <img class="flores4" src="src/assets/flores.png" alt="flores4" />
-      <img class="rosas-l" src="src/assets/rosasl.png" alt="rosasl" />
+      <img class="rosas-l" src="./imagenes/rosasl.png" alt="rosasl" />
       <img class="brillos" src="src/assets/brillosd.png" alt="brillos" />
       <img class="brillos2" src="src/assets/brillosd.png" alt="brillos" />
       <img class="brillos3" src="src/assets/brillosd.png" alt="brillos" />

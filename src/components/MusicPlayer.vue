@@ -31,7 +31,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 const isPlaying = ref(true);
 const currentTime = ref(0);
 const duration = ref(0);
-const audio = new Audio("src/assets/goldenhour.mp3"); // Ruta de tu canción
+const audio = new Audio("./imagenes/goldenhour.mp3"); // Ruta de tu canción
 
 const togglePlayPause = () => {
   if (isPlaying.value) {
