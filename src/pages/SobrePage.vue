@@ -2,7 +2,7 @@
   <transition name="fade">
     <div v-if="visible" class="envelope-page">
       <div class="envelope"></div>
-      <img class="corona" src="src/assets/corona.png" alt="corona" />
+      <img class="corona" src="/corona.png" alt="corona" />
       <div class="centerT">
         <p class="textoN">Nayeli</p>
         <p class="textoSN">Te invita a celebrar sus XV</p>
@@ -10,14 +10,14 @@
       <button class="seal-button" @click="Abrir">
         <img src="./sello.png" alt="Sello" />
       </button>
-      <img class="flores" src="public/flores.png" alt="flores" />
-      <img class="flores2" src="src/assets/flores.png" alt="flores2" />
-      <img class="flores3" src="src/assets/flores.png" alt="flores3" />
-      <img class="flores4" src="src/assets/flores.png" alt="flores4" />
-      <img class="rosas-l" src="./imagenes/rosasl.png" alt="rosasl" />
-      <img class="brillos" src="src/assets/brillosd.png" alt="brillos" />
-      <img class="brillos2" src="src/assets/brillosd.png" alt="brillos" />
-      <img class="brillos3" src="src/assets/brillosd.png" alt="brillos" />
+      <img class="flores" src="/flores.png" alt="flores" />
+      <img class="flores2" src="/flores.png" alt="flores2" />
+      <img class="flores3" src="/flores.png" alt="flores3" />
+      <img class="flores4" src="/flores.png" alt="flores4" />
+      <img class="rosas-l" src="/rosasl.png" alt="rosasl" />
+      <img class="brillos" src="/brillosd.png" alt="brillos" />
+      <img class="brillos2" src="/brillosd.png" alt="brillos" />
+      <img class="brillos3" src="/brillosd.png" alt="brillos" />
     </div>
   </transition>
 </template>
@@ -26,7 +26,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 // Importa el archivo de sonido usando la sintaxis de ES6
-import soundUrl from "src/assets/brillos.mp3";
+import soundUrl from "/brillos.mp3?import";
 
 const visible = ref(true);
 const router = useRouter();
@@ -75,7 +75,7 @@ const Abrir = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("src/assets/sobre.png"); /* Asegúrate de colocar la imagen en la carpeta assets */
+  background-image: url("/sobre.png"); /* Asegúrate de colocar la imagen en la carpeta assets */
   background-size: cover;
   background-position: center;
 }

@@ -5,19 +5,19 @@
       <div class="overlay"></div>
       <div class="main-content">
         <div class="content">
-          <img class="fotoP" src="src/assets/fotoPrincipal.jpeg" alt="fotoP" />
+          <img class="fotoP" src="/fotoPrincipal.jpeg" alt="fotoP" />
           <p class="sacramento">Nayeli</p>
           <p class="junge">MIS 15 AÑOS</p>
-          <img class="linead" src="src/assets/linea.png" />
+          <img class="linead" src="/linea.png" />
         </div>
         <div class="centrado">
           <MusicPlayer class="music-player" />
-          <img class="linea" src="src/assets/linea2.png" />
+          <img class="linea" src="/linea2.png" />
           <p class="allura">Aparta la Fecha</p>
           <p class="openSans">9 de Noviembre de 2024</p>
           <CuentaRegresiva />
           <p class="openSans" style="margin-top: 20px">Faltan:</p>
-          <img class="lineaAbajo" src="public/linea2.png" />
+          <img class="lineaAbajo" src="/linea2.png" />
         </div>
       </div>
     </q-page>
@@ -36,7 +36,7 @@ import MusicPlayer from "../components/MusicPlayer.vue";
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("src/assets/fotoPierna2.jpeg");
+  background-image: url("/fotoPierna2.jpeg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed; /* Asegura que la imagen de fondo no se mueva */
@@ -101,7 +101,7 @@ import MusicPlayer from "../components/MusicPlayer.vue";
   }
 
   .background-image {
-    background-image: url("src/assets/fotoPierna3.jpeg");
+    background-image: url("/fotoPierna3.jpeg");
     background-position: center center;
   }
 
