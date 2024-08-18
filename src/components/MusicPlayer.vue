@@ -1,5 +1,6 @@
 <template>
   <div class="music-player">
+    <p class="junge">Escucha mi canción</p>
     <div class="progress-container">
       <input
         type="range"
@@ -10,17 +11,16 @@
         class="progress-bar"
       />
     </div>
+    <button @click="previousTrack" class="control-button">
+      <span class="material-symbols-outlined"> skip_previous </span>
+    </button>
     <button @click="togglePlayPause" class="control-button">
       <span class="material-icons">
         {{ isPlaying ? "pause" : "play_arrow" }}
       </span>
     </button>
-    <button @click="previousTrack" class="control-button">
-      <span class="material-symbols-outlined"> skip_next </span>
-    </button>
-
     <button @click="nextTrack" class="control-button">
-      <span class="material-symbols-outlined"> skip_previous </span>
+      <span class="material-symbols-outlined"> skip_next </span>
     </button>
   </div>
 </template>
@@ -77,10 +77,13 @@ onUnmounted(() => {
 <style scoped>
 .music-player {
   display: inline;
-  align-items: center;
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
   gap: 10px;
   color: #fff;
   margin-top: 50px;
+  justify-content: center;
+  width: 70%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
 .control-button {
@@ -90,27 +93,36 @@ onUnmounted(() => {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
-.progress-container {
-  flex: 1;
-}
-
 .progress-bar {
   width: 100%;
-  background: linear-gradient(145deg, #d4af37, #c7971e);
+  background: #444; /* Color de fondo de la barra */
   border-radius: 5px;
-  height: 5px;
+  height: 8px; /* Altura de la barra */
   cursor: pointer;
+  appearance: none;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    145deg,
+    #d4af37,
+    #c7971e
+  ); /* Gradiente para la parte recorrida de la barra */
+  height: 8px; /* Altura de la barra recorrida */
+  border-radius: 5px;
 }
 
 .progress-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  position: relative;
+  z-index: 3;
+  top: -2px;
 }
 
 .progress-bar::-moz-range-thumb {
@@ -120,5 +132,17 @@ onUnmounted(() => {
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.junge {
+  font-family: "Junge", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px; /* Aumenta el tamaño del texto */
+  color: #fff;
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-bottom: 20px; /* Añade un margen inferior para separar del resto del contenido */
 }
 </style>
