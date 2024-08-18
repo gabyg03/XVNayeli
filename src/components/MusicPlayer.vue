@@ -77,14 +77,18 @@ onUnmounted(() => {
   justify-content: center;
   width: 70%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
-
 .control-button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
+  background-color: transparent !important; /* Fondo transparente */
+  border: none !important; /* Sin borde */
+  box-shadow: none !important; /* Sin sombra */
+  color: #fff !important; /* Color del icono */
   font-size: 1.5rem;
   cursor: pointer;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
 }
+
 .progress-bar {
   width: 100%;
   background: #444; /* Color de fondo de la barra */
