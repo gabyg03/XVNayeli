@@ -8,7 +8,7 @@
         <p class="textoSN">Te invita a celebrar sus XV</p>
       </div>
       <button class="seal-button" @click="Abrir">
-        <img src="./sello.png" alt="Sello" />
+        <img src="/sello.png" alt="Sello" />
       </button>
       <img class="flores" src="/flores.png" alt="flores" />
       <img class="flores2" src="/flores.png" alt="flores2" />
