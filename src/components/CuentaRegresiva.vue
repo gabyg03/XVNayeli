@@ -88,6 +88,8 @@ onBeforeUnmount(() => {
     gap: 15px;
     font-family: "Arial", sans-serif;
     color: #fff;
+    margin-top: 30px;
+    flex-direction: row; /* Asegura que los elementos hijos se dispongan en una fila horizontal */
   }
 
   #countdown div {
