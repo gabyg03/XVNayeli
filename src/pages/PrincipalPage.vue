@@ -16,7 +16,7 @@
           <p class="allura">Aparta la Fecha</p>
           <p class="openSans">9 de Noviembre de 2024</p>
           <CuentaRegresiva />
-          <p class="openSans" style="margin-top: 30px">Faltan:</p>
+          <p class="openSans" style="margin-top: 20px">Faltan:</p>
           <img class="lineaAbajo" src="src/assets/linea2.png" />
         </div>
       </div>
