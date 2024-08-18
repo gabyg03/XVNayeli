@@ -11,17 +11,9 @@
         class="progress-bar"
       />
     </div>
-    <button @click="previousTrack" class="control-button">
-      <span class="material-symbols-outlined"> skip_previous </span>
-    </button>
-    <button @click="togglePlayPause" class="control-button">
-      <span class="material-icons">
-        {{ isPlaying ? "pause" : "play_arrow" }}
-      </span>
-    </button>
-    <button @click="nextTrack" class="control-button">
-      <span class="material-symbols-outlined"> skip_next </span>
-    </button>
+    <q-btn icon = "skip_previous" @click="previousTrack" class="control-button"/>
+    <q-btn :icon = "isPlaying?'pause':'play_arrow'"  @click="togglePlayPause" class="control-button"/>
+    <q-btn icon = "skip_next" @click="nextTrack" class="control-button"/>
   </div>
 </template>
 
