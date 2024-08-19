@@ -15,9 +15,18 @@
           <img class="linea" src="/linea2.png" />
           <p class="allura">Aparta la Fecha</p>
           <p class="openSans">9 de Noviembre de 2024</p>
+          <p class="openSans" style="margin-top: 10px">Faltan:</p>
           <CuentaRegresiva />
-          <p class="openSans" style="margin-top: 20px">Faltan:</p>
           <img class="lineaAbajo" src="/linea2.png" />
+        </div>
+        <div class="centrado degradado">
+          <p class="sacramento2">Nayeli</p>
+          <p class="allura parrafoP">
+            Sabemos que hoy es un dia muy especial, muy esperado por ti, por
+            ello queremos que la realidad de entrar en esta etapa supere a tus
+            suenos.<br />
+            Felices 15 anos <br />Te queremos mucho. <br />Atte: Tus Padres
+          </p>
         </div>
       </div>
     </q-page>
@@ -187,6 +196,29 @@ import MusicPlayer from "../components/MusicPlayer.vue";
     font-weight: 300;
     font-style: normal;
     font-size: 30px;
+  }
+  .parrafoP {
+    font-size: 25px;
+  }
+  .sacramento2 {
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(239, 184, 16); /* Color dorado */
+    font-size: 100px;
+    z-index: 2; /* Asegura que el texto esté sobre el cuadro negro */
+    text-shadow: 1px 1px 2px #000;
+    left: 70px;
+    margin-top: 200px;
+  }
+  .degradado {
+    background: linear-gradient(
+      to bottom,
+      rgba(34, 85, 34, 0.3),
+      rgba(34, 85, 34, 0.7),
+      rgba(34, 85, 34, 1)
+    ); /* Degradado vertical de verde oscuro */
+    padding: 20px; /* Espaciado interno */
   }
 }
 </style>
