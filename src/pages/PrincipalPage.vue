@@ -17,7 +17,7 @@
           <p class="openSans">9 de Noviembre de 2024</p>
           <p class="openSans" style="margin-top: 10px">Faltan:</p>
           <CuentaRegresiva />
-          <img class="lineaAbajo" src="/linea2.png" />
+          <img class="lineaAbajo" src="/linea2.png" style="margin-top: 30px" />
         </div>
         <div class="centrado degradado">
           <p class="sacramento2">Nayeli</p>
@@ -27,6 +27,7 @@
             suenos.<br />
             Felices 15 anos <br />Te queremos mucho. <br />Atte: Tus Padres
           </p>
+          <img class="foto1" src="/foto1.jpeg" style="margin-top: 30px" />
         </div>
       </div>
     </q-page>
@@ -147,7 +148,7 @@ import MusicPlayer from "../components/MusicPlayer.vue";
     bottom: 200px;
     z-index: 2;
     font-size: 25px;
-    left: 145px;
+    left: 33%;
   }
   .allura {
     font-family: "Allura", cursive;
@@ -199,6 +200,7 @@ import MusicPlayer from "../components/MusicPlayer.vue";
   }
   .parrafoP {
     font-size: 25px;
+    margin-top: 20px;
   }
   .sacramento2 {
     font-family: "Sacramento", cursive;
@@ -209,16 +211,23 @@ import MusicPlayer from "../components/MusicPlayer.vue";
     z-index: 2; /* Asegura que el texto esté sobre el cuadro negro */
     text-shadow: 1px 1px 2px #000;
     left: 70px;
-    margin-top: 200px;
+    margin-bottom: 0px;
+    margin-top: 600px;
   }
   .degradado {
     background: linear-gradient(
       to bottom,
-      rgba(34, 85, 34, 0.3),
-      rgba(34, 85, 34, 0.7),
-      rgba(34, 85, 34, 1)
+      rgba(34, 85, 34, 0.1) 0%,
+      /* Verde más transparente al inicio */ rgba(34, 85, 34, 0.5) 10%,
+      /* Un poco más sólido a medida que baja */ rgba(34, 85, 34, 0.7) 20%,
+      /* Aún más sólido */ rgba(34, 85, 34, 1) 50%
+        /* Verde completamente sólido al final */
     ); /* Degradado vertical de verde oscuro */
     padding: 20px; /* Espaciado interno */
+  }
+  .foto1 {
+    width: 95%;
+    height: auto;
   }
 }
 </style>

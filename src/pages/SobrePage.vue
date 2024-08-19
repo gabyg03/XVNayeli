@@ -236,7 +236,7 @@ const Abrir = () => {
     font-family: "Glass Antiqua", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 5px;
   }
   .corona {
