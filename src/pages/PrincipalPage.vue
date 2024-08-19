@@ -29,6 +29,17 @@
           </p>
           <img class="foto1" src="/foto1.jpeg" style="margin-top: 30px" />
         </div>
+        <div class="video-background">
+          <video autoplay muted loop playsinline>
+            <source src="/marcha.mp4" type="video/mp4" />
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+          <div class="contenido">
+            <img class="lineav" src="/linea2.png" />
+            <p class="allura">Recepcion</p>
+            <p class="openSans2" style="margin-top: 5px">Hora</p>
+          </div>
+        </div>
       </div>
     </q-page>
   </transition>
@@ -228,6 +239,50 @@ import MusicPlayer from "../components/MusicPlayer.vue";
   .foto1 {
     width: 95%;
     height: auto;
+  }
+  .video-background {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* O el tamaño que desees */
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+
+  .video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el div */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Manda el video al fondo */
+  }
+
+  .contenido {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+    color: white; /* Ajusta el color del texto según sea necesario */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center; /* Centra el contenido dentro del div */
+  }
+  .lineav {
+    width: 80%;
+  }
+  .openSans2 {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
   }
 }
 </style>
