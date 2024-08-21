@@ -77,8 +77,8 @@
 import CuentaRegresiva from "../components/CuentaRegresiva.vue";
 import MusicPlayer from "../components/MusicPlayer.vue";
 const abrirUbicacion = () => {
-  const latitud = 14.3185; // Reemplaza con la latitud correcta
-  const longitud = -89.4407; // Reemplaza con la longitud correcta
+  const latitud = 14.336533; // Reemplaza con la latitud correcta
+  const longitud = -89.44831; // Reemplaza con la longitud correcta
 
   // URLs para Waze y Google Maps
   const wazeUrl = `https://waze.com/ul?ll=${latitud},${longitud}&navigate=yes`;
