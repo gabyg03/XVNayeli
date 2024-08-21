@@ -36,8 +36,21 @@
           </video>
           <div class="contenido">
             <img class="lineav" src="/linea2.png" />
-            <p class="allura">Recepcion</p>
-            <p class="openSans2" style="margin-top: 5px">Hora</p>
+            <p class="allura letra">Ceremonia Religiosa</p>
+            <p class="openSans2" style="margin-top: 5px">4:00 p.m.</p>
+            <img class="iglesia" src="/iglesia.jpg" />
+          </div>
+        </div>
+        <div class="video-background">
+          <video autoplay muted loop playsinline>
+            <source src="/shutup.mp4" type="video/mp4" />
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+          <div class="contenido">
+            <img class="lineav" src="/linea2.png" />
+            <p class="allura letra">Recepcion</p>
+            <p class="openSans2" style="margin-top: 5px">5:00 p.m.</p>
+            <img class="iglesia" src="/recepcion.jpg" />
           </div>
         </div>
       </div>
@@ -268,14 +281,14 @@ import MusicPlayer from "../components/MusicPlayer.vue";
     z-index: 1; /* Asegura que el contenido esté sobre el video */
     color: white; /* Ajusta el color del texto según sea necesario */
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 
     align-items: center; /* Centra el contenido dentro del div */
   }
   .lineav {
-    width: 80%;
+    width: 90%;
   }
   .openSans2 {
     font-family: "Open Sans", sans-serif;
@@ -283,6 +296,16 @@ import MusicPlayer from "../components/MusicPlayer.vue";
     font-weight: 300;
     font-style: normal;
     font-size: 25px;
+  }
+  .letra {
+    font-size: 43px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+  .iglesia {
+    width: 90%;
+    height: auto;
+    margin-top: 15px;
   }
 }
 </style>
