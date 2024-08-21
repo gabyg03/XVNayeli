@@ -39,6 +39,14 @@
             <p class="allura letra">Ceremonia Religiosa</p>
             <p class="openSans2" style="margin-top: 5px">4:00 p.m.</p>
             <img class="iglesia" src="/iglesia.jpg" />
+            <p class="junge2">Iglesia de Nuestro Señor de Ostua</p>
+            <q-btn
+              style="background: goldenrod"
+              glossy
+              label="Abrir Ubicacion"
+              @click="abrirUbicacion"
+            />
+            <img class="lineav2" src="/linea2.png" />
           </div>
         </div>
         <div class="video-background">
@@ -51,6 +59,13 @@
             <p class="allura letra">Recepcion</p>
             <p class="openSans2" style="margin-top: 5px">5:00 p.m.</p>
             <img class="iglesia" src="/recepcion.jpg" />
+            <p class="junge2">Salon de eventos, Rancho La Potranca</p>
+            <q-btn
+              style="background-color: goldenrod"
+              glossy
+              label="Abrir Ubicacion"
+            />
+            <img class="lineav2" src="/linea2.png" />
           </div>
         </div>
       </div>
@@ -61,6 +76,22 @@
 <script setup>
 import CuentaRegresiva from "../components/CuentaRegresiva.vue";
 import MusicPlayer from "../components/MusicPlayer.vue";
+const abrirUbicacion = () => {
+  const latitud = 14.3185; // Reemplaza con la latitud correcta
+  const longitud = -89.4407; // Reemplaza con la longitud correcta
+
+  // URLs para Waze y Google Maps
+  const wazeUrl = `https://waze.com/ul?ll=${latitud},${longitud}&navigate=yes`;
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${latitud},${longitud}`;
+
+  // Intenta abrir en Waze primero
+  window.location.href = wazeUrl;
+
+  // Si Waze no está disponible, redirige a Google Maps
+  setTimeout(() => {
+    window.location.href = googleMapsUrl;
+  }, 1000);
+};
 </script>
 
 <style scoped>
@@ -289,6 +320,11 @@ import MusicPlayer from "../components/MusicPlayer.vue";
   }
   .lineav {
     width: 90%;
+    margin-top: 30px;
+  }
+  .lineav2 {
+    width: 90%;
+    margin-top: 40px;
   }
   .openSans2 {
     font-family: "Open Sans", sans-serif;
@@ -303,9 +339,17 @@ import MusicPlayer from "../components/MusicPlayer.vue";
     margin-top: 5px;
   }
   .iglesia {
-    width: 90%;
+    width: 95%;
     height: auto;
     margin-top: 15px;
+    border: 3px solid goldenrod;
+  }
+  .junge2 {
+    font-size: 20px;
+    font-family: "Junge", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 50px;
   }
 }
 </style>
