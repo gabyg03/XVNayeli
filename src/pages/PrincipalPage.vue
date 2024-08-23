@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <q-page>
-      <div class="background-image"></div>
+      <div :class="backgroundClass"></div>
       <div class="overlay"></div>
       <div class="main-content">
         <div class="content">
@@ -68,26 +68,58 @@
             <img class="lineav2" src="/linea2.png" />
           </div>
         </div>
+        <div class="content"></div>
       </div>
     </q-page>
   </transition>
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import CuentaRegresiva from "../components/CuentaRegresiva.vue";
 import MusicPlayer from "../components/MusicPlayer.vue";
-const abrirUbicacion = () => {
-  const latitud = 14.336533; // Reemplaza con la latitud correcta
-  const longitud = -89.44831; // Reemplaza con la longitud correcta
 
-  // URLs para Waze y Google Maps
+const backgroundClass = ref("background-inicial");
+
+const seccionCambio1 = ref(null);
+const seccionCambio2 = ref(null);
+const observerCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      if (entry.target === seccionCambio1.value) {
+        backgroundClass.value = "background-cambio1";
+      } else if (entry.target === seccionCambio2.value) {
+        backgroundClass.value = "background-cambio2";
+      }
+    } else {
+      // Restablece la clase de fondo cuando la sección sale de la vista
+      if (
+        entry.target === seccionCambio1.value ||
+        entry.target === seccionCambio2.value
+      ) {
+        backgroundClass.value = "background-inicial";
+      }
+    }
+  });
+};
+const observer = new IntersectionObserver(observerCallback, {
+  threshold: 0.25,
+});
+
+onMounted(() => {
+  if (seccionCambio1.value) observer.observe(seccionCambio1.value);
+  if (seccionCambio2.value) observer.observe(seccionCambio2.value);
+});
+
+const abrirUbicacion = () => {
+  const latitud = 14.336533;
+  const longitud = -89.44831;
+
   const wazeUrl = `https://waze.com/ul?ll=${latitud},${longitud}&navigate=yes`;
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${latitud},${longitud}`;
 
-  // Intenta abrir en Waze primero
   window.location.href = wazeUrl;
 
-  // Si Waze no está disponible, redirige a Google Maps
   setTimeout(() => {
     window.location.href = googleMapsUrl;
   }, 1000);
@@ -95,8 +127,8 @@ const abrirUbicacion = () => {
 </script>
 
 <style scoped>
-.background-image {
-  position: fixed; /* Hacer que el fondo sea fijo */
+.background-inicial {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -104,10 +136,40 @@ const abrirUbicacion = () => {
   background-image: url("/fotoPierna2.jpeg");
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed; /* Asegura que la imagen de fondo no se mueva */
-  z-index: -1; /* Asegúrate de que esté detrás de todo el contenido */
+  background-attachment: fixed;
+  z-index: -1;
+  transition: background-image 0.5s ease-in-out;
 }
 
+.background-cambio1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/fotoLado.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: -1;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.background-cambio2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/fotoLado.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: -1;
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Resto del estilo sigue igual... */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -159,20 +221,39 @@ const abrirUbicacion = () => {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    height: 100vh;
     color: #fff; /* Color del texto para mejor visibilidad sobre el fondo oscuro */
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .background-image {
-    background-image: url("/fotoPierna3.jpeg");
+  .background-inicial {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/fotoPierna2.jpeg");
+    background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
+    z-index: -1;
+    transition: background-image 0.5s ease-in-out;
+  }
+
+  .background-cambio1 {
+    background-image: url("/fotoLado.jpeg");
+  }
+
+  .background-cambio2 {
+    background-image: url("/fotoLado.jpeg");
   }
 
   .fotoP {
-    height: 915px; /* Ajusta el tamaño según sea necesario */
+    height: 100vh; /* Ajusta el tamaño según sea necesario */
     width: auto;
+    position: absolute;
   }
   .overlay {
     position: fixed; /* Hacer que el fondo sea fijo */
@@ -189,21 +270,19 @@ const abrirUbicacion = () => {
     font-style: normal;
     color: rgb(239, 184, 16); /* Color dorado */
     font-size: 100px;
-    position: absolute; /* Posición absoluta para que el texto se sitúe sobre el cuadro */
-    bottom: 250px; /* Ajusta la posición según sea necesario */
+    position: relative; /* Posición absoluta para que el texto se sitúe sobre el cuadro */
+    top: 35%; /* Ajusta la posición según sea necesario */
     z-index: 2; /* Asegura que el texto esté sobre el cuadro negro */
     text-shadow: 1px 1px 2px #000;
-    left: 70px;
   }
   .junge {
     font-family: "Junge", cursive;
     font-weight: 400;
     font-style: normal;
-    position: absolute;
-    bottom: 200px;
+    position: relative;
+    top: 33%;
     z-index: 2;
     font-size: 25px;
-    left: 33%;
   }
   .allura {
     font-family: "Allura", cursive;
@@ -222,8 +301,8 @@ const abrirUbicacion = () => {
   .linead {
     width: 450px;
     height: auto;
-    position: absolute;
-    bottom: 30px;
+    position: relative;
+    top: 20%;
   }
   .contenedor-principal > div {
     width: 100%; /* Abarca todo el ancho del contenedor */
