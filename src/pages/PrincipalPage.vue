@@ -24,8 +24,8 @@
           <p class="allura parrafoP">
             Sabemos que hoy es un dia muy especial, muy esperado por ti, por
             ello queremos que la realidad de entrar en esta etapa supere a tus
-            suenos.<br />
-            Felices 15 anos <br />Te queremos mucho. <br />Atte: Tus Padres
+            sueños.<br />
+            Felices 15 años <br />Te queremos mucho. <br />Atte: Tus Padres
           </p>
           <img class="foto1" src="/foto1.jpeg" style="margin-top: 30px" />
         </div>
@@ -68,7 +68,16 @@
             <img class="lineav2" src="/linea2.png" />
           </div>
         </div>
-        <div class="content"></div>
+        <div class="content2" ref="seccionCambio1">
+          <div class="divInter">
+            <img src="/Group 1.svg" alt="code" class="code" />
+            <p class="allura letra2">Codigo de Vestimenta</p>
+            <p class="jung3">
+              Formal en la recepcion <br />y por la noche vaquero
+            </p>
+            <p class="tangerine">Color rojo reservado para la quinceañera</p>
+          </div>
+        </div>
       </div>
     </q-page>
   </transition>
@@ -88,6 +97,7 @@ const observerCallback = (entries) => {
     if (entry.isIntersecting) {
       if (entry.target === seccionCambio1.value) {
         backgroundClass.value = "background-cambio1";
+        document.querySelector(".overlay").style.display = "none";
       } else if (entry.target === seccionCambio2.value) {
         backgroundClass.value = "background-cambio2";
       }
@@ -147,7 +157,7 @@ const abrirUbicacion = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/fotoLado.jpeg");
+  background-image: url("/fondo.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -227,6 +237,16 @@ const abrirUbicacion = () => {
     align-items: center;
     justify-content: center;
   }
+  .content2 {
+    position: relative; /* Importante para que el contenido se posicione correctamente sobre el fondo */
+    flex-direction: column;
+    margin-top: 25px;
+    width: 100%;
+    height: 100vh;
+    color: #fff; /* Color del texto para mejor visibilidad sobre el fondo oscuro */
+    display: flex;
+    align-items: center;
+  }
 
   .background-inicial {
     position: fixed;
@@ -243,7 +263,7 @@ const abrirUbicacion = () => {
   }
 
   .background-cambio1 {
-    background-image: url("/fotoLado.jpeg");
+    background-image: url("/fondo.jpg");
   }
 
   .background-cambio2 {
@@ -283,6 +303,13 @@ const abrirUbicacion = () => {
     top: 33%;
     z-index: 2;
     font-size: 25px;
+  }
+  .jung3 {
+    font-family: "Junge", cursive;
+    font-weight: 400;
+    color: #bba74f;
+    font-size: 20px;
+    margin-top: 5px;
   }
   .allura {
     font-family: "Allura", cursive;
@@ -417,6 +444,12 @@ const abrirUbicacion = () => {
     margin-bottom: 0px;
     margin-top: 5px;
   }
+  .letra2 {
+    font-size: 35px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    color: #bba74f;
+  }
   .iglesia {
     width: 95%;
     height: auto;
@@ -429,6 +462,26 @@ const abrirUbicacion = () => {
     font-weight: 400;
     font-style: normal;
     margin-top: 50px;
+  }
+  .divInter {
+    width: 95%;
+    margin: 0 auto; /* Centra el div horizontalmente */
+    background-color: rgba(246, 242, 226, 0.7); /* Fondo blanco transparente */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+    text-align: center;
+  }
+  .code {
+    width: 80px;
+    height: auto;
+  }
+  .tangerine {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    color: #bba74f;
   }
 }
 </style>
