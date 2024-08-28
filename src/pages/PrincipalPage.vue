@@ -77,6 +77,21 @@
             </p>
             <p class="tangerine">Color rojo reservado para la quinceañera</p>
           </div>
+          <img src="/foto2.jpeg" class="imagen" />
+          <div class="divInter">
+            <img src="/confirm.svg" alt="confirm" class="confirm" />
+            <p class="allura letra2">Confirma tu Asistencia</p>
+            <p class="jung3">
+              Este dia es especial para mi y mas aun si tu estas presente
+            </p>
+            <q-btn
+              style="background: goldenrod"
+              glossy
+              label="Confirmar Asistencia"
+              @click="confirmar"
+            />
+          </div>
+          <img src="/foto2.jpeg" class="imagen" />
         </div>
       </div>
     </q-page>
@@ -466,15 +481,21 @@ const abrirUbicacion = () => {
   .divInter {
     width: 95%;
     margin: 0 auto; /* Centra el div horizontalmente */
-    background-color: rgba(246, 242, 226, 0.7); /* Fondo blanco transparente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco transparente */
     border-radius: 15px; /* Bordes redondeados */
     padding: 20px; /* Espaciado interno */
     box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
     text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
   }
   .code {
     width: 80px;
     height: auto;
+  }
+  .confirm {
+    width: 50px;
+    height: auto;
+    background-image: #bba74f;
   }
   .tangerine {
     font-family: "Tangerine", cursive;
@@ -482,6 +503,12 @@ const abrirUbicacion = () => {
     font-style: normal;
     font-size: 40px;
     color: #bba74f;
+  }
+  .imagen {
+    border-radius: 5%;
+    width: 80%;
+    height: auto;
+    margin: 10px;
   }
 }
 </style>
