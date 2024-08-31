@@ -73,16 +73,18 @@
             <img src="/Group 1.svg" alt="code" class="code" />
             <p class="allura letra2">Codigo de Vestimenta</p>
             <p class="jung3">
-              Formal en la recepcion <br />y por la noche vaquero
+              Formal en la recepción <br />y por la noche vaquero
             </p>
             <p class="tangerine">Color rojo reservado para la quinceañera</p>
           </div>
+
           <img src="/foto2.jpeg" class="imagen" />
+
           <div class="divInter">
             <img src="/confirm.svg" alt="confirm" class="confirm" />
             <p class="allura letra2">Confirma tu Asistencia</p>
             <p class="jung3">
-              Este dia es especial para mi y mas aun si tu estas presente
+              Este día es especial para mí y más aún si tú estás presente
             </p>
             <q-btn
               style="background: goldenrod"
@@ -91,7 +93,34 @@
               @click="confirmar"
             />
           </div>
+
           <img src="/foto2.jpeg" class="imagen" />
+
+          <div class="divInter">
+            <img src="/Regalo.svg" alt="regalo" class="confirm" />
+            <p class="allura letra2">Lluvia de sobres</p>
+            <p class="jung3">
+              Tu presencia es el mejor regalo, pero si deseas obsequiarme algo,
+              agradezco tu muestra de cariño en regalo de sobre.
+            </p>
+          </div>
+
+          <img src="/foto2.jpeg" class="imagen" />
+
+          <div class="divInsta">
+            <img src="/insta.svg" alt="insta" class="confirm" />
+            <h3 class="instaletra">#XVNAYELI2024</h3>
+            <p class="jung3">
+              Comparte conmigo tus momentos celebrando durante el evento usando
+              mi hashtag en Instagram.
+            </p>
+          </div>
+        </div>
+
+        <div class="content" ref="seccionCambio2">
+          <p class="sacramento">Nayeli</p>
+          <p class="junge">MIS 15 AÑOS</p>
+          <img class="linead" src="/linea.png" />
         </div>
       </div>
     </q-page>
@@ -186,7 +215,7 @@ const abrirUbicacion = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/fotoLado.jpeg");
+  background-image: url("/fotoPrincipal.jpeg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -257,7 +286,7 @@ const abrirUbicacion = () => {
     flex-direction: column;
     margin-top: 25px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     color: #fff; /* Color del texto para mejor visibilidad sobre el fondo oscuro */
     display: flex;
     align-items: center;
@@ -282,7 +311,7 @@ const abrirUbicacion = () => {
   }
 
   .background-cambio2 {
-    background-image: url("/fotoLado.jpeg");
+    background-image: url("/fotoPrincipal.jpeg");
   }
 
   .fotoP {
@@ -488,6 +517,17 @@ const abrirUbicacion = () => {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
   }
+  .divInsta {
+    width: 95%;
+    margin: 0 auto; /* Centra el div horizontalmente */
+    background-color: rgba(255, 255, 255, 1); /* Fondo blanco transparente */
+    border-radius: 0px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-bottom: 30px;
+  }
   .code {
     width: 80px;
     height: auto;
@@ -509,6 +549,13 @@ const abrirUbicacion = () => {
     width: 80%;
     height: auto;
     margin: 10px;
+  }
+  .instaletra {
+    font-size: 35px;
+    color: #bba74f;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 </style>
