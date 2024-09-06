@@ -90,7 +90,11 @@
               style="background: goldenrod"
               glossy
               label="Confirmar Asistencia"
-              @click="confirmar"
+              @click="abrirDialogo"
+            />
+            <ConfirmDialog
+              v-model:modelValue="dialogVisible"
+              @confirm="handleConfirm"
             />
           </div>
 
@@ -131,6 +135,18 @@
 import { ref, onMounted } from "vue";
 import CuentaRegresiva from "../components/CuentaRegresiva.vue";
 import MusicPlayer from "../components/MusicPlayer.vue";
+import ConfirmDialog from "../components/CuadroDialogo.vue";
+
+const dialogVisible = ref(false);
+
+const abrirDialogo = () => {
+  dialogVisible.value = true;
+};
+
+const handleConfirm = (data) => {
+  console.log("Datos confirmados:", data);
+  // Aquí puedes manejar los datos y enviarlos a Google Sheets
+};
 
 const backgroundClass = ref("background-inicial");
 
