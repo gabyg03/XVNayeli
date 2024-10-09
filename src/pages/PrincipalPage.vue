@@ -86,12 +86,6 @@
             <p class="jung3">
               Este día es especial para mí y más aún si tú estás presente
             </p>
-            <q-btn
-              style="background: goldenrod"
-              glossy
-              label="Confirmar Asistencia"
-              @click="abrirDialogo"
-            />
             <ConfirmDialog
               v-model:modelValue="dialogVisible"
               @confirm="handleConfirm"
