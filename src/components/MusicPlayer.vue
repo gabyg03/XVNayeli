@@ -1,5 +1,5 @@
 <template>
-  <div class="music-player">
+  <div class="music-player body">
     <p class="junge">Escucha mi canción</p>
     <div class="progress-container">
       <input
@@ -11,9 +11,13 @@
         class="progress-bar"
       />
     </div>
-    <q-btn icon = "skip_previous" @click="previousTrack" class="control-button"/>
-    <q-btn :icon = "isPlaying?'pause':'play_arrow'"  @click="togglePlayPause" class="control-button"/>
-    <q-btn icon = "skip_next" @click="nextTrack" class="control-button"/>
+    <q-btn icon="skip_previous" @click="previousTrack" class="control-button" />
+    <q-btn
+      :icon="isPlaying ? 'pause' : 'play_arrow'"
+      @click="togglePlayPause"
+      class="control-button"
+    />
+    <q-btn icon="skip_next" @click="nextTrack" class="control-button" />
   </div>
 </template>
 

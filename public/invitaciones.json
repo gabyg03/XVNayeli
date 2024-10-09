@@ -2,201 +2,241 @@
   {
     "codigo": "1",
     "invitado": "Familia Orellana",
-    "reservado": 4
+    "reservado": 4,
+    "confirmacion": false
   },
   {
     "codigo": "2",
     "invitado": "Familia Moran",
-    "reservado": 3
+    "reservado": 3,
+    "confirmacion": false
   },
   {
     "codigo": "3",
     "invitado": "Familia Mendoza",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "4",
     "invitado": "Familia Servellon",
-    "reservado": 4
+    "reservado": 4,
+    "confirmacion": false
   },
   {
     "codigo": "5",
     "invitado": "Familia Figueroa",
-    "reservado": 3
+    "reservado": 3,
+    "confirmacion": false
   },
   {
     "codigo": "6",
     "invitado": "Ian",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "7",
     "invitado": "Familia Lopez",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "8",
     "invitado": "Johana",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "9",
     "invitado": "Alexandra",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "10",
     "invitado": "Jennifer ",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "11",
     "invitado": "Carlos",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "12",
     "invitado": "Christopher",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "13",
     "invitado": "Joaquin",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "14",
     "invitado": "Christian",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "15",
     "invitado": "Alejandra",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "16",
     "invitado": "Nayeli Alessandra",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "17",
     "invitado": "Genesis",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "18",
     "invitado": "Gabriela",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "19",
     "invitado": "Katia",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "20",
     "invitado": "Gael",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "21",
     "invitado": "Adrian",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "22",
     "invitado": "Melvin",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "23",
     "invitado": "Caro",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "24",
     "invitado": "Glendy",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "25",
     "invitado": "Ruby",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "26",
     "invitado": "Nahomy",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "27",
     "invitado": "Gustavo",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "28",
     "invitado": "Henry",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "29",
     "invitado": "Jorge",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "30",
     "invitado": "Misael",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "31",
     "invitado": "Diego Banda",
-    "reservado": 1
+    "reservado": 1,
+    "confirmacion": false
   },
   {
     "codigo": "32",
     "invitado": "Sandra",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "33",
     "invitado": "Karla",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "34",
     "invitado": "Andrea",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "35",
     "invitado": "Fer",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "36",
     "invitado": "Nelson Vivar y Familia",
-    "reservado": 3
+    "reservado": 3,
+    "confirmacion": false
   },
   {
     "codigo": "37",
     "invitado": "Bryan",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "38",
     "invitado": "Mery",
-    "reservado": 2
+    "reservado": 2,
+    "confirmacion": false
   },
   {
     "codigo": "39",
     "invitado": "Boris y familia",
-    "reservado": 3
+    "reservado": 3,
+    "confirmacion": false
   },
   {
     "codigo": "40",
     "invitado": "Yeni Marroquin y Familia",
-    "reservado": 4
+    "reservado": 4,
+    "confirmacion": false
   }
 ]

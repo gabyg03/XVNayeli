@@ -94,8 +94,9 @@ const abrirDialogo = async () => {
           if (!value) {
             return `Debe de ingresar al menos 1 invitado`;
           }
+          value = Number(value); // Convierte a número
           if (!Number.isInteger(value)) {
-            return `Debe de ingresar un valor sin "." o ","`;
+            return `Ingrese un numero sin "." o ","`;
           }
         },
       });
@@ -116,7 +117,16 @@ const abrirDialogo = async () => {
 
 <style>
 .swal2-popup {
-  border: 2px solid gold; /* Orilla dorada */
-  background-color: #f40909; /* Fondo rojo ocre */
+  border: 4px solid gold; /* Orilla dorada */
+  background-color: #ffffff; /* Fondo rojo ocre */
+}
+
+/* Cambiar el estilo del título */
+.swal2-title {
+  color: goldenrod; /* Color del título */
+  font-weight: bold;
+}
+.swal2-confirm {
+  background-color: #a40505;
 }
 </style>
