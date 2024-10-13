@@ -64,6 +64,7 @@
               style="background-color: goldenrod"
               glossy
               label="Abrir Ubicacion"
+              @click="abrirUbicacionR"
             />
             <img class="lineav2" src="/linea2.png" />
           </div>
@@ -178,6 +179,19 @@ onMounted(() => {
 const abrirUbicacion = () => {
   const latitud = 14.336533;
   const longitud = -89.44831;
+
+  const wazeUrl = `https://waze.com/ul?ll=${latitud},${longitud}&navigate=yes`;
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${latitud},${longitud}`;
+
+  window.location.href = wazeUrl;
+
+  setTimeout(() => {
+    window.location.href = googleMapsUrl;
+  }, 1000);
+};
+const abrirUbicacionR = () => {
+  const latitud = 14.392902892478789;
+  const longitud = -89.43009897223136;
 
   const wazeUrl = `https://waze.com/ul?ll=${latitud},${longitud}&navigate=yes`;
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${latitud},${longitud}`;
