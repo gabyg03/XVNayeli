@@ -73,9 +73,7 @@
           <div class="divInter">
             <img src="/Group 1.svg" alt="code" class="code" />
             <p class="allura letra2">Codigo de Vestimenta</p>
-            <p class="jung3">
-              Formal en la recepción <br />y por la noche vaquero
-            </p>
+            <p class="jung3">Vaquero Formal</p>
             <p class="tangerine">Color rojo reservado para la quinceañera</p>
           </div>
 

@@ -69,77 +69,89 @@ const abrirDialogo = async () => {
     const familia = invitaciones.find((inv) => inv.codigo === codigo);
 
     if (familia) {
-      let mensajeReservado = `Tienen reservados ${
-        familia.adultos + familia.ninos
-      } espacios: ${familia.adultos} adultos`;
-      if (familia.ninos > 0) {
-        mensajeReservado += ` y ${familia.ninos} niños.`;
-      } else {
-        mensajeReservado += ".";
-      }
+      // Calcular el total de espacios reservados (adultos + niños)
+      const totalReservado = familia.adultos + familia.ninos;
 
-      // Crear los campos de entrada y estructurar el formulario
+      let mensajeReservado = `Tienen reservados ${totalReservado} espacios:<br/> <br/>`;
+
+      // Crear los campos de entrada para adultos y niños
       const htmlForm = `
         <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
           <div>
-            <label>Adultos (máx ${familia.adultos}):</label>
-            <input type="number" id="swal-input-adultos" min="1" max="${
-              familia.adultos
-            }" class="swal2-input" style="width: 100px; margin-top: 5px;">
+            <label>Adultos: </label>
+            <input type="text" id="swal-input-adultos" class="swal2-input" style="width: 100px; margin-top: 5px;" inputmode="numeric" pattern="[0-9]*">
           </div>
-          ${
-            familia.ninos > 0
-              ? `<div>
-                   <label>Niños (máx ${familia.ninos}):</label>
-                   <input type="number" id="swal-input-ninos" min="0" max="${familia.ninos}" class="swal2-input" style="width: 100px; margin-top: 5px;">
-                 </div>`
-              : ""
-          }
+          <div>
+            <label>Niños: </label>
+            <input type="text" id="swal-input-ninos" class="swal2-input" style="width: 100px; margin-top: 5px;" inputmode="numeric" pattern="[0-9]*">
+          </div>
         </div>
       `;
 
       const result = await Swal.fire({
-        title: `Familia: ${familia.invitado}`,
+        title: `${familia.invitado}`,
         html: mensajeReservado + htmlForm,
         focusConfirm: false,
         preConfirm: () => {
+          // Tomar los valores de los campos, si están vacíos se asignan como 0
           const asistentesAdultos =
-            document.getElementById("swal-input-adultos").value;
+            document.getElementById("swal-input-adultos").value || "0";
           const asistentesNinos =
-            familia.ninos > 0
-              ? document.getElementById("swal-input-ninos").value
-              : 0;
+            document.getElementById("swal-input-ninos").value || "0";
 
-          if (asistentesAdultos > familia.adultos) {
+          // Validar que solo se ingresen números enteros positivos
+          if (
+            !/^\d+$/.test(asistentesAdultos) ||
+            !/^\d+$/.test(asistentesNinos)
+          ) {
             Swal.showValidationMessage(
-              `No puede exceder de ${familia.adultos} adultos`
+              "Por favor, ingrese solo números enteros positivos"
             );
             return false;
           }
 
-          if (familia.ninos > 0 && asistentesNinos > familia.ninos) {
+          // Convertir los valores a enteros
+          const asistentesAdultosInt = parseInt(asistentesAdultos);
+          const asistentesNinosInt = parseInt(asistentesNinos);
+
+          const totalAsistentes = asistentesAdultosInt + asistentesNinosInt;
+
+          // Validar que al menos una persona asista
+          if (totalAsistentes === 0) {
+            Swal.showValidationMessage("Debe asistir al menos una persona");
+            return false;
+          }
+
+          // Validar que no se deje ningún campo vacío
+          if (asistentesAdultosInt === 0 && asistentesNinosInt === 0) {
             Swal.showValidationMessage(
-              `No puede exceder de ${familia.ninos} niños`
+              "Por favor, ingrese el número de asistentes adultos o niños"
             );
             return false;
           }
 
-          return { asistentesAdultos, asistentesNinos };
+          // Validar que la suma no exceda el total reservado
+          if (totalAsistentes > totalReservado) {
+            Swal.showValidationMessage(
+              `La suma de adultos y niños no puede exceder el total reservado de ${totalReservado} personas`
+            );
+            return false;
+          }
+
+          return { asistentesAdultosInt, asistentesNinosInt };
         },
         confirmButtonText: "Confirmar",
         showCancelButton: true,
       });
 
       if (result.isConfirmed) {
-        const { asistentesAdultos, asistentesNinos } = result.value;
+        const { asistentesAdultosInt, asistentesNinosInt } = result.value;
 
         // Confirmación de asistencia
-        Swal.fire(
-          `Asistencia confirmada para ${asistentesAdultos} adultos y ${asistentesNinos} niños`
-        );
+        Swal.fire("Asistencia confirmada");
 
         // Enviar el correo de confirmación
-        enviarCorreo(codigo, familia, asistentesAdultos, asistentesNinos);
+        enviarCorreo(codigo, familia, asistentesAdultosInt, asistentesNinosInt);
       }
     } else {
       Swal.fire("Error", "Código no encontrado", "error");
