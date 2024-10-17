@@ -289,7 +289,7 @@
   },
   {
     "codigo": "LMN258",
-    "invitado": "Familia Juan Carlos",
+    "invitado": "Juan Carlos y Familia",
     "adultos": 2,
     "ninos": 1
   },
@@ -449,7 +449,7 @@
   { "codigo": "PNJ512", "invitado": "Norma Aguirre", "adultos": 2, "ninos": 0 },
   {
     "codigo": "XZT678",
-    "invitado": "Beto Azacualpa",
+    "invitado": "Beto y Familia",
     "adultos": 3,
     "ninos": 0
   },
@@ -484,9 +484,14 @@
     "adultos": 2,
     "ninos": 0
   },
-  { "codigo": "XYC142", "invitado": "Agustín Tibar", "adultos": 2, "ninos": 0 },
-  { "codigo": "GMZ605", "invitado": "Yendo Tobar", "adultos": 3, "ninos": 0 },
-  { "codigo": "NSF451", "invitado": "Edwin Lic", "adultos": 4, "ninos": 0 },
+  { "codigo": "XYC142", "invitado": "Agustín Tobar", "adultos": 2, "ninos": 0 },
+  { "codigo": "GMZ605", "invitado": "Yenni Tobar", "adultos": 3, "ninos": 0 },
+  {
+    "codigo": "NSF451",
+    "invitado": "Edwin y Familia",
+    "adultos": 4,
+    "ninos": 0
+  },
   {
     "codigo": "WKL209",
     "invitado": "Alfredo Gonzales",
@@ -495,14 +500,14 @@
   },
   {
     "codigo": "XMR914",
-    "invitado": "Yesenia Secre",
+    "invitado": "Yesenia",
     "adultos": 2,
     "ninos": 0
   },
   {
     "codigo": "PQJ789",
     "invitado": "Gaby Flores",
-    "adultos": 2,
+    "adultos": 1,
     "ninos": 0
   },
   { "codigo": "GRX130", "invitado": "Don Tino", "adultos": 3, "ninos": 0 },
@@ -529,7 +534,7 @@
   },
   {
     "codigo": "GLZ718",
-    "invitado": "Todo Morataya",
+    "invitado": "Toño Morataya",
     "adultos": 2,
     "ninos": 0
   },
@@ -559,7 +564,7 @@
   },
   {
     "codigo": "DGH725",
-    "invitado": "Oscuro Vaquero",
+    "invitado": "Oscar Vaquero",
     "adultos": 2,
     "ninos": 0
   },
