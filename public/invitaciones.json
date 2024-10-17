@@ -422,7 +422,7 @@
     "ninos": 0
   },
   { "codigo": "BXN472", "invitado": "Rafa Acevedo", "adultos": 3, "ninos": 0 },
-  { "codigo": "VKH350", "invitado": "Isa", "adultos": 2, "ninos": 0 },
+  { "codigo": "VKH350", "invitado": "Isa Lemus", "adultos": 2, "ninos": 0 },
   { "codigo": "QTG804", "invitado": "Paty Pereza", "adultos": 3, "ninos": 0 },
   {
     "codigo": "MPL781",
@@ -614,6 +614,18 @@
     "codigo": "ZYP613",
     "invitado": "Miriam Sanabria",
     "adultos": 1,
+    "ninos": 0
+  },
+  {
+    "codigo": "QPX394",
+    "invitado": "Carlos Ulloa",
+    "adultos": 3,
+    "ninos": 0
+  },
+  {
+    "codigo": "JDN721",
+    "invitado": "Jose Rodriguez",
+    "adultos": 3,
     "ninos": 0
   }
 ]

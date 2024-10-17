@@ -20,7 +20,7 @@ const enviarCorreo = (codigo, familia, asistentesAdultos, asistentesNinos) => {
   const templateParams = {
     codigo: codigo,
     nombre: familia.invitado,
-    reservado: `${familia.adultos} adultos y ${familia.ninos} niños`,
+    reservado: `${familia.adultos + familia.ninos} personas`,
     asistentes: `${asistentesAdultos} adultos y ${asistentesNinos} niños`,
   };
 
