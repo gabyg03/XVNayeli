@@ -77,7 +77,7 @@
             <p class="tangerine">Color rojo reservado para la quinceañera</p>
           </div>
 
-          <img src="/foto2.jpeg" class="imagen" />
+          <img src="/foto2.jpg" class="imagen" />
 
           <div class="divInter">
             <img src="/confirm.svg" alt="confirm" class="confirm" />
@@ -91,7 +91,7 @@
             />
           </div>
 
-          <img src="/foto2.jpeg" class="imagen" />
+          <img src="/foto3.jpg" class="imagen" />
 
           <div class="divInter">
             <img src="/Regalo.svg" alt="regalo" class="confirm" />
@@ -102,7 +102,7 @@
             </p>
           </div>
 
-          <img src="/foto2.jpeg" class="imagen" />
+          <img src="/foto4.jpeg" class="imagen" />
 
           <div class="divInsta">
             <img src="/insta.svg" alt="insta" class="confirm" />
@@ -444,12 +444,12 @@ const abrirUbicacionR = () => {
   .degradado {
     background: linear-gradient(
       to bottom,
-      rgba(34, 85, 34, 0.1) 0%,
-      /* Verde más transparente al inicio */ rgba(34, 85, 34, 0.5) 10%,
-      /* Un poco más sólido a medida que baja */ rgba(34, 85, 34, 0.7) 20%,
-      /* Aún más sólido */ rgba(34, 85, 34, 1) 50%
-        /* Verde completamente sólido al final */
-    ); /* Degradado vertical de verde oscuro */
+      rgba(255, 0, 0, 0.1) 0%,
+      /* Rojo más transparente al inicio */ rgba(173, 5, 5, 0.189) 5%,
+      /* Un poco más sólido a medida que baja */ rgba(173, 5, 5, 0.7) 20%,
+      /* Aún más sólido */ rgb(173, 5, 5) 50%
+        /* Rojo completamente sólido al final */
+    ); /* Degradado vertical de rojo */
     padding: 20px; /* Espaciado interno */
   }
   .foto1 {
