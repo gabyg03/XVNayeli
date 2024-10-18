@@ -430,9 +430,19 @@
     "adultos": 2,
     "ninos": 0
   },
-  { "codigo": "SLD563", "invitado": "Oscar Orlando", "adultos": 2, "ninos": 0 },
+  {
+    "codigo": "SLD563",
+    "invitado": "Oscar Orlando y Esposa",
+    "adultos": 2,
+    "ninos": 0
+  },
   { "codigo": "WYD963", "invitado": "Norma Rosales", "adultos": 3, "ninos": 0 },
-  { "codigo": "FJN206", "invitado": "Adán Samayoa", "adultos": 2, "ninos": 0 },
+  {
+    "codigo": "FJN206",
+    "invitado": "Adán Samayoa y Esposa",
+    "adultos": 2,
+    "ninos": 0
+  },
   {
     "codigo": "GZX182",
     "invitado": "Lupita Gonzales",
