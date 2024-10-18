@@ -65,6 +65,9 @@ const abrirDialogo = async () => {
     },
   });
 
+  // Convertir el código ingresado a mayúsculas
+  const codigoMayusculas = codigo.toUpperCase();
+
   if (codigo) {
     const familia = invitaciones.find((inv) => inv.codigo === codigo);
 
