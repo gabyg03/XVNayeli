@@ -81,6 +81,7 @@ const abrirDialogo = async () => {
       const htmlForm = `
         <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
           <div>
+            <label >Niños mayores a 12 se consideran adultos</label><br/><br/>
             <label>Adultos: </label>
             <input type="text" id="swal-input-adultos" class="swal2-input" style="width: 100px; margin-top: 5px;" inputmode="numeric" pattern="[0-9]*">
           </div>
