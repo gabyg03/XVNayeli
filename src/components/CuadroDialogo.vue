@@ -68,8 +68,8 @@ const abrirDialogo = async () => {
   // Convertir el código ingresado a mayúsculas
   const codigoMayusculas = codigo.toUpperCase();
 
-  if (codigo) {
-    const familia = invitaciones.find((inv) => inv.codigo === codigo);
+  if (codigoMayusculas) {
+    const familia = invitaciones.find((inv) => inv.codigo === codigoMayusculas);
 
     if (familia) {
       // Calcular el total de espacios reservados (adultos + niños)
