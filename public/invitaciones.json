@@ -661,5 +661,23 @@
     "invitado": "Efrain Gomez y Familia",
     "adultos": 5,
     "ninos": 0
+  },
+  {
+    "codigo": "FTK891",
+    "invitado": "Carlos Rosa",
+    "adultos": 2,
+    "ninos": 0
+  },
+  {
+    "codigo": "WJV634",
+    "invitado": "Jose Bonilla",
+    "adultos": 2,
+    "ninos": 0
+  },
+  {
+    "codigo": "KZD725",
+    "invitado": "Nicol Ardon",
+    "adultos": 2,
+    "ninos": 0
   }
 ]
